@@ -14,6 +14,7 @@ public class Collectible {
         this.name = name;
     }
 
+    /** @noinspection unused*/
     public String getDescription() {
         return description;
     }

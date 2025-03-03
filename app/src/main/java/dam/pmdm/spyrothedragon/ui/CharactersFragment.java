@@ -1,5 +1,6 @@
 package dam.pmdm.spyrothedragon.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,6 @@ public class CharactersFragment extends Fragment {
 
     private FragmentCharactersBinding binding;
 
-    private RecyclerView recyclerView;
     private CharactersAdapter adapter;
     private List<Character> charactersList;
 
@@ -36,7 +36,7 @@ public class CharactersFragment extends Fragment {
 
         binding = FragmentCharactersBinding.inflate(inflater, container, false);
         // Inicializamos el RecyclerView y el adaptador
-        recyclerView = binding.recyclerViewCharacters;
+        RecyclerView recyclerView = binding.recyclerViewCharacters;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         charactersList = new ArrayList<>();
         adapter = new CharactersAdapter(charactersList);
@@ -53,6 +53,8 @@ public class CharactersFragment extends Fragment {
         binding = null;
     }
 
+    /** @noinspection CallToPrintStackTrace*/
+    @SuppressLint("NotifyDataSetChanged")
     private void loadCharacters() {
         try {
             // Cargamos el archivo XML desde res/xml (NOTA: ahora se usa R.xml.characters)
@@ -68,7 +70,7 @@ public class CharactersFragment extends Fragment {
             Character currentCharacter = null;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
-                String tagName = null;
+                String tagName;
 
                 switch (eventType) {
                     case XmlPullParser.START_TAG:

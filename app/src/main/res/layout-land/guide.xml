@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- TOOLBAR MENU INFO PANEL -->
+    <include
+        android:id="@+id/info_menu_panel"
+        layout="@layout/guide_menu" />
+
+
+    <!-- CENTRAL LANDSCAPE-ORIENTATION PANEL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- NEXT BUTTON + FLYING SPYRO + GUIDE NAVIGATION + HIDE BUTTON -->
+        <LinearLayout
+            android:id="@+id/panel_navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <!-- NEXT BUTTON + FLYING SPYRO -->
+            <include
+                android:id="@+id/guide_next"
+                layout="@layout/guide_next" />
+            <include
+                android:id="@+id/guide_flying"
+                layout="@layout/guide_flying" />
+
+            <!-- GUIDE NAVIGATION + HIDE BUTTON -->
+            <include
+                android:id="@+id/guide_navigation"
+                layout="@layout/guide_navigation" />
+        </LinearLayout>
+
+
+        <!-- WELCOME PANEL -->
+        <include
+            android:id="@+id/welcome_panel"
+            layout="@layout/guide_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+
+        <!-- SUMMARY PANEL -->
+        <include
+            android:id="@+id/summary_panel"
+            layout="@layout/guide_summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3" />
+
+    </LinearLayout>
+
+
+    <!-- BOTTOMNAVIGATIONVIEW INFO PANEL -->
+    <include
+        android:id="@+id/info_tabs_panel"
+        layout="@layout/guide_tabs" />
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package dam.pmdm.spyrothedragon.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,6 @@ import dam.pmdm.spyrothedragon.models.World;
 public class WorldsFragment extends Fragment {
 
     private FragmentWorldsBinding binding;
-    private RecyclerView recyclerView;
     private WorldsAdapter adapter;
     private List<World> worldsList;
 
@@ -33,7 +33,7 @@ public class WorldsFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentWorldsBinding.inflate(inflater, container, false);
-        recyclerView = binding.recyclerViewWorlds;
+        RecyclerView recyclerView = binding.recyclerViewWorlds;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         worldsList = new ArrayList<>();
         adapter = new WorldsAdapter(worldsList);
@@ -49,6 +49,8 @@ public class WorldsFragment extends Fragment {
         binding = null;
     }
 
+    /** @noinspection CallToPrintStackTrace*/
+    @SuppressLint("NotifyDataSetChanged")
     private void loadWorlds() {
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.worlds);
@@ -63,7 +65,7 @@ public class WorldsFragment extends Fragment {
             World currentWorld = null;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
-                String tagName = null;
+                String tagName;
 
                 switch (eventType) {
                     case XmlPullParser.START_TAG:

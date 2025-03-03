@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- MAIN ACTIVITY TOOLBAR -->
+    <style name="toolbar_style" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/purple</item>
+    </style>
+
+
+    <!-- GUIDE WELCOME HEADER TEXT STYLE-->
+    <style name="welcome_header_style" parent="Theme.SpyroTheDragon">
+        <item name="android:fontFamily">@font/saiyan</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:text">@string/welcome1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">90sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!-- GUIDE WELCOME+SUMMARY TEXT STYLE -->
+    <style name="guide_text_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginVertical">10dp</item>
+    </style>
+
+
+    <!-- GUIDE DECORATIVE PICTURES -->
+    <style name="decorative_picture_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- GUIDE NAVIGATION BAR -->
+    <style name="navigation_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/rounded_rectangle</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- GUIDE NAVIGATION BAR RADIO-BUTTONS -->
+    <style name="radio_button_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint">@color/purple</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:scaleX">0.6</item>
+        <item name="android:scaleY">0.6</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+
+    <!-- GUIDE SKIP BUTTON -->
+    <style name="skip_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_marginTop">-5dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:text">@string/skip_guide</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!-- GUIDE FLYING SPYRO PICTURE -->
+    <style name="flying_style" parent="Theme.SpyroTheDragon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">30dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/spyro_flying</item>
+        <item name="android:contentDescription">@string/spyro</item>
+    </style>
+
+
+    <!-- GUIDE START/NEXT/DONE BUTTON -->
+    <style name="next_style" parent="Theme.SpyroTheDragon">
+        <item name="android:text">@string/next</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginHorizontal">30dp</item>
+    </style>
+
+
+    <!-- GUIDE BUBBLES -->
+    <style name="guide_bubble_style" parent="Theme.SpyroTheDragon">
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="guide_bubble_toolbar_menu_style" parent="guide_bubble_style">
+        <item name="android:background">@drawable/bubble_reversed</item>
+        <item name="android:paddingTop">40dp</item>
+    </style>
+    <style name="guide_bubble_bottom_navigation_style" parent="guide_bubble_style">
+        <item name="android:background">@drawable/bubble</item>
+        <item name="android:paddingBottom">40dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/guide_nav_graph"
+    app:startDestination="@id/guideWelcome">
+
+    <fragment
+        android:id="@+id/guideWelcome"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideWelcome"
+        android:label="fragment_guide_welcome">
+        <action
+            android:id="@+id/action_guideWelcome_to_guideCharacters"
+            app:destination="@id/guideCharacters"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_right_back" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideCharacters"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideTabs"
+        android:label="fragment_guide_characters">
+        <action
+            android:id="@+id/action_guideCharacters_to_guideWorlds"
+            app:destination="@id/guideWorlds"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left_back"
+            app:popExitAnim="@anim/slide_right_back" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideWorlds"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideTabs"
+        android:label="fragment_guide_worlds">
+        <action
+            android:id="@+id/action_guideWorlds_to_guideCollectibles"
+            app:destination="@id/guideCollectibles"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left_back"
+            app:popExitAnim="@anim/slide_right_back" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideCollectibles"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideTabs"
+        android:label="fragment_guide_collectibles">
+        <action
+            android:id="@+id/action_guideCollectibles_to_guideInfo"
+            app:destination="@id/guideInfo"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left_back"
+            app:popExitAnim="@anim/slide_right_back" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideInfo"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideMenu"
+        android:label="fragment_guide_info">
+        <action
+            android:id="@+id/action_guideInfo_to_guideGuide"
+            app:destination="@id/guideGuide"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left_back"
+            app:popExitAnim="@anim/slide_right_back" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideGuide"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideMenu"
+        android:label="fragment_guide_guide">
+        <action
+            android:id="@+id/action_guideGuide_to_guideSummary"
+            app:destination="@id/guideSummary"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left_back"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideSummary"
+        android:name="dam.pmdm.spyrothedragon.guide.GuideSummary"
+        android:label="fragment_guide_summary" />
+
+</navigation>

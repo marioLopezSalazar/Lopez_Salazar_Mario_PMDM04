@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- TOOLBAR MENU INFO PANEL -->
+    <include
+        android:id="@+id/info_menu_panel"
+        layout="@layout/guide_menu" />
+
+
+    <!-- GUIDE NAVIGATION + HIDE BUTTON -->
+    <include
+        android:id="@+id/guide_navigation"
+        layout="@layout/guide_navigation" />
+
+
+    <!-- WELCOME PANEL -->
+    <include
+        android:id="@+id/welcome_panel"
+        layout="@layout/guide_welcome" />
+
+
+    <!-- SUMMARY PANEL -->
+    <include
+        android:id="@+id/summary_panel"
+        layout="@layout/guide_summary" />
+
+
+    <!-- NEXT BUTTON + FLYING SPYRO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/guide_next"
+            layout="@layout/guide_next" />
+        <include
+            android:id="@+id/guide_flying"
+            layout="@layout/guide_flying" />
+    </LinearLayout>
+
+
+    <!-- BOTTOMNAVIGATIONVIEW INFO PANEL -->
+    <include
+        android:id="@+id/info_tabs_panel"
+        layout="@layout/guide_tabs" />
+
+</LinearLayout>

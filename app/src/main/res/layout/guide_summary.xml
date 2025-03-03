@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/summary_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="10dp"
+    android:layout_weight="1"
+    android:visibility="gone">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/summary_text1"
+            style="@style/guide_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary1"
+            app:layout_constraintBottom_toTopOf="@id/decoration_panel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- DECORATIVE PANEL -->
+        <include
+            android:id="@+id/decoration_panel"
+            layout="@layout/guide_decoration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/summary_text2"
+            app:layout_constraintTop_toBottomOf="@id/summary_text1" />
+
+        <TextView
+            android:id="@+id/summary_text2"
+            style="@style/guide_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary2"
+            app:layout_constraintBottom_toTopOf="@id/summary_text3"
+            app:layout_constraintTop_toBottomOf="@id/decoration_panel" />
+
+        <TextView
+            android:id="@+id/summary_text3"
+            style="@style/guide_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/summary_text2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

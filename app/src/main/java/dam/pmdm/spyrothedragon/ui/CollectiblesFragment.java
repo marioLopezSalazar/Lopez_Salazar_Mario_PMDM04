@@ -1,5 +1,6 @@
 package dam.pmdm.spyrothedragon.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,6 @@ import dam.pmdm.spyrothedragon.models.Collectible;
 public class CollectiblesFragment extends Fragment {
 
     private FragmentCollectiblesBinding binding;
-    private RecyclerView recyclerView;
     private CollectiblesAdapter adapter;
     private List<Collectible> collectiblesList;
 
@@ -33,7 +33,7 @@ public class CollectiblesFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentCollectiblesBinding.inflate(inflater, container, false);
-        recyclerView = binding.recyclerViewCollectibles;
+        RecyclerView recyclerView = binding.recyclerViewCollectibles;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         collectiblesList = new ArrayList<>();
         adapter = new CollectiblesAdapter(collectiblesList);
@@ -49,6 +49,8 @@ public class CollectiblesFragment extends Fragment {
         binding = null;
     }
 
+    /** @noinspection CallToPrintStackTrace*/
+    @SuppressLint("NotifyDataSetChanged")
     private void loadCollectibles() {
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.collectibles);
@@ -63,7 +65,7 @@ public class CollectiblesFragment extends Fragment {
             Collectible currentCollectible = null;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
-                String tagName = null;
+                String tagName;
 
                 switch (eventType) {
                     case XmlPullParser.START_TAG:

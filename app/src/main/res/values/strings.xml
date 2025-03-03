@@ -1,9 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SpyroTheDragon</string>
     <string name="worlds">Mundos</string>
     <string name="characters">Personajes</string>
     <string name="collectibles">Coleccionables</string>
     <string name="title_about">Acerca de</string>
-    <string name="text_about">Aplicación desarrollada por \n <b>Lindsay Barrero Martínez.</b></string>
+    <string name="text_about">Aplicación desarrollada por \n <b>Mario López Salazar.</b></string>
     <string name="accept">Aceptar</string>
+    <string name="info">Info</string>
+    <string name="guideNoAvailable">La guía de bienvenida no está disponible.</string>
+    <string name="showGuide">Mostrar guía de bienvenida</string>
+    <string name="skip_guide">Omitir guía</string>
+    <string name="next">Siguiente</string>
+    <string name="welcome1">BIENVENIDO</string>
+    <string name="welcome2">Prepárate para explorar el mundo mágico de esta aplicación inspirada en</string>
+    <string name="welcome3">Aquí aprenderás a navegar por pestañas llenas de dragones, mundos fascinantes y montones de tesoros brillantes.</string>
+    <string name="welcome4">¿Listo para empezar?</string>
+    <string name="welcome5">Pulsa \"Comenzar\" y deja que Spyro te lleve volando a través de esta guía interactiva.</string>
+    <string name="start">¡Comenzar!</string>
+    <string name="spyro">Spyro</string>
+    <string name="guide_characters">Aquí podrás descubrir \n todos los personajes \n del universo Spyro</string>
+    <string name="guide_worlds">Navega por los \n diferentes mundos \n del universo Spyro</string>
+    <string name="guide_collectibles">Diferentes objetos \n que hallarás en \n del universo Spyro</string>
+    <string name="guide_info_button">Desarrollador \n y versión \n de la app</string>
+    <string name="guide_guide_button">Aquí podrás \n visualizar de nuevo \n esta guía</string>
+    <string name="summary1">Ya estás preparado para descubrir el mundo de</string>
+    <string name="summary2">Has aprendido cómo conocer los personajes, mundos y coleccionables.</string>
+    <string name="summary3">También sabes dónde ver más información sobre esta app, y cómo volver a visualizar esta guía.</string>
+    <string name="playApp">¡Vamos allá!</string>
 </resources>
