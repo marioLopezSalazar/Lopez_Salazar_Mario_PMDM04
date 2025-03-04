@@ -2,93 +2,52 @@
 
 ## INTRODUCCIÓN
 
-**Spyro The Dragon** es una aplicación que permite **simular la captura de Pokémon**, facilitando el acceso a la información básica de todos tus Pokémon capturados. Está desarrollada en Java para dispositivos Android, y presenta una interfaz muy visual, intuitiva y de ágil navegación.
-
-La información del entrenador Pokémon se almacena en la nube, lo que le permite utilizar la aplicación en diferentes dispositivos sin perder sus avances.
+**Spyro The Dragon** es una aplicación que permite **adentrarse en el universo mágico de Spyro**, pudiendo conocer algunos de sus elementos principales: Personajes, mundos y coleccionables. Está desarrollada en Java para dispositivos Android, y presenta una interfaz muy visual, intuitiva y de ágil navegación.
 
 Se trata de una aplicación de carácter académico desarrollada para el módulo ***"Programación Multimedia y Dispositivos Móviles"*** dentro del *CFGM Dessarrollo de Aplicaciones Multiplataforma* a distancia en el IES Aguadulce (Almería, España).
-
-* SDK mínimo: 24
-* SDK target: 31
-* Versión: 1.0.
-
 
 ## CARACTERÍSTICAS PRINCIPALES
 
 Las funcionalidades clave de la aplicación son las sigiuentes:
 
-* **Autenticación**: La navegación de la APP arranca con la autenticación del ususario. Basada en la interfaz prediseñada que ofrece *Firebase Authentication*, facilita el registro y login de los entrenadores Pokémon de dos formas:
-  * <ins>Email y contraseña</ins>, permitiendo además introducir un nombre o identificador personalizado.
-  * <ins>Cuenta de Google</ins>, la forma más rápida de loguearse.
-    
-  ![Login](https://github.com/user-attachments/assets/777d88e8-5015-4b59-ba3d-449ce92baca6 "Ventana de Login")
-* **Pokédex**: Ofrece un listado de los Pokémon, obtenido en tiempo real desde la [API Pokémon](https://pokeapi.co/docs/v2). Por defecto se muestra solamente la primera generación de Pokémon, si bien puede configurarse (en la pestaña *Configuración*, opción *Generaciones*) para mostrar **hasta la 9ª generación Pokémon**.
-
-    ![Pokedex](https://github.com/user-attachments/assets/5d198887-5d76-4efc-99c3-c89412ae3b89 "Ventana de Login") 
-    ![Generations](https://github.com/user-attachments/assets/132bf172-4585-4b42-beec-e5821f280fb2 "Opción para elegir el tamaño de la Pokédex")
-
-  La *captura de un Pokémon* se realiza con solo tocar sobre su nombre, apareciendo entonces los detalles del mismo. Los Pokémon que ya han sido capturados no pueden volver a capturarse (salvo que sean liberados previamente), y aparecen claramente marcados en la Pokédex mediante una Pokéball.
-* **Pokémon capturados**: En esta pestaña aparecen todos los Pokémon capturados por el entrenador, ordenados por su índice. En la vista general aparecen su imagen y su tipo (o tipos). Pulsando sobre el Pokémon se puede acceder a más detalles del mismo (imagen más grande, peso y altura).
-
-    ![Caught](https://github.com/user-attachments/assets/9d870f04-0a0e-46c7-a69d-70fd0d1cc376 "Ventana de Pokémon capturados")
-    ![Detail](https://github.com/user-attachments/assets/69e513c5-0026-4113-91bf-deb1c8d977da "Ventana de detalle de Pokémon") 
-
-  El listado de Pokémon capturados, así como los detalles de cada Pokémon, son almacenados en la nube vinculados a la cuenta de usuario (en la base de datos *Firebase Firestore*). Así, cuando el entrenador se loguee de nuevo más adelante (en este o en otro dispositivo), sus Pokémon capturados seguirán estando disponibles.
-* **Liberar Pokémon**: Los Pokémon capturados pueden ser liberados de dos maneras:
-  * Desde la lista de Pokémon capturados, arrastrándolo hacia la derecha.
-  * Desde los detalles del Pokémon, pulsando el botón *Liberar Pokémon*.
-
-  Para evitar accidentes, la posibilidad de liberar Pokémon puede habilitarse o deshabilitare desde la pestaña *Configuración*, opción *Liberar Pokémon*.
-
-  Cuando un Pokémon es liberado, naturalmente es eliminado de la lista de Pokémon capturados y deja de estar marcado como "Capturado" en la Pokédex, volviendo a estar disponible para ser capturado.
-* **Ajustes**: La ventana de ajustes ofrece las siguientes posibilidades, algunas de ellas ya mencionadas:
-
-  ![Settings-1](https://github.com/user-attachments/assets/57ef8116-db6e-4493-8bc7-dddc2debf391) 
-  ![Settings-2](https://github.com/user-attachments/assets/367d3e39-0342-472d-9860-adf5b4320a1c)
-
-
-  * **Idioma**: La aplicación puede configurarse para ser utilizada en español y en inglés. Además de los propios textos de la APP, también se traduce el tipo (o tipos) del Pokémon, así como el formato numérico de los pesos y las alturas.
-  * **Liberar Pokémon**: Como ya se ha indicado, habilita o deshabilita la posibilidad de que el entrenador pueda liberar individualmente algunos de sus Pokémon.
-  * **Apariencia**: Esta opción permite entrenar con dos modos de color e iluminación: ***Diurno*** y ***Nocturno***, o simplemente utilizar el tema predefinido por el usuario en el dispositivo móvil.
-  * **Generaciones**: Como ya se ha indicado, esta opción permite configurar la cantidad de Pokémon que aparecen en la Pokédex. Concretamente, las opciones son:
-    
-    | Opción                 | Pokémon disponibles |
-    |------------------------|:-------------------:|
-    | Hasta la 1ª generación |  1-151              |
-    | Hasta la 2ª generación |  1-251              |
-    | Hasta la 3ª generación |  1-386              |
-    | Hasta la 4ª generación |  1-493              |
-    | Hasta la 5ª generación |  1-649              |
-    | Hasta la 6ª generación |  1-721              |
-    | Hasta la 7ª generación |  1-809              |
-    | Hasta la 8ª generación |  1-905              |
-    | Hasta la 9ª generación |  1-1025             |
-  * **Cerrar sesión**: Opción de logout. Facilita, por ejemplo, que varios entrenadores puedan compartir el mismo dispositivo sin interferir.
-  * **Eliminar usuario**: Permite eliminar el usuario de la aplicación.
+* **Pestañas con información del universo de Spyro The Dragon**: Ofrece un listado de los personajes principales, algunos de los mundos que lo componen, y los tipos de objetos coleccionables que pueden hallarse a lo largo de estos mundos.
   
-    *<ins>Nota:</ins>* Para los usuarios logueados mediante *email y contraseña*, se requiere la reautentificación manual mediante contraseña.
+  ![Tabs](https://github.com/user-attachments/assets/7cbbb429-f7e1-4ddc-b86f-64b2e5536dbf)
 
-    Todos sus Pokémon son liberados, y la cuenta de entrenador deja de estar disponible en todos los dispositivos. Si posteriormente desea volver a entrenar, su lista de Pokémon estará inicialmente vacía.
-  * **Acerca de...**: Informa sobre la versión de la APP y su desarrollador.
+* **Guía interactiva**: Incluye un recorrido visual explicativo por las diferentes secciones de la aplicación, marcando e indicando la información que puede hallarse en cada opción. La guía se visualiza de manera predeterminada en la primera ejecución de la app, aunque también puede volver a visualizarse a través del botón habilitado al efecto en el menú principal.
+
+  ![Guide](https://github.com/user-attachments/assets/705c4d5e-8181-4d13-8739-79ed29415c80)
+
+* **Easter Egg "Bola de fuego"**: En la pestaña de Personajes, al hacer una pulsación larga sobre Spyro, se obtiene una animación del dragón protagonista lanzando fuego por la boca.
+
+  ![Fire](https://github.com/user-attachments/assets/81b2da35-dbfb-4eb9-be4b-dc872fd448f9)
+
+* **Easter Egg "Vídeo"**: Al realizar 4 pulsaciones consecutivas sobre el coleccionable Gemas, aparece por sorpresa el clásico vídeo introductivo de uno de los primeros videojuegos de Spyro.
+
+  ![Video](https://github.com/user-attachments/assets/977f5f8a-bee8-4eef-a388-a21c16f17b72)
+
+* **Acerca de...**: Informa sobre la versión de la APP y su desarrollador.
+  
+  ![About](https://github.com/user-attachments/assets/b4bd7531-8cf2-41bf-8859-847b6a57270d)
   
 
 ## TECNOLOGÍAS UTILIZADAS
 
-* **Retrofit**: Biblioteca de cliente HTTP para Java, desarrollada por Square, que facilita la realización de llamadas HTTP a APIs. En esta aplicación se utiliza para hacer llamadas HTTP GET a la [**API Pokémon**](https://pokeapi.co/), pudiendo disponer de información del mundo Pokémon en formato JSON.
-* **Gson (Google's JSON)**: Biblioteca de Java desarrollada por Google que se utiliza para convertir objetos JSON a objetos Java y viceversa. En esta aplicación se utiliza para convertir los objetos JSON descargados de la [**API Pokémon**](https://pokeapi.co/) a objetos Java empleados por la aplicación.
-* [**Firebase**](https://firebase.google.com/): Plataforma de almacenamiento en la nube que facilita el desarrollo de aplicaciones. Esta aplicación utiliza:
-    * <ins>Authentication</ins> para la autenticación y gestión de usuarios. Concretamente se utiliza la inferfaz preconstruida de logueo provista por Firebase.
-    * <ins>Firestore database</ins>, base de datos No-SQL empleada para almacenar la colección de Pokémon de cada entrenador, así como el listado de *tipos de Pokémon* localizados al idioma español.
-* **SharedPreferences**: API Android que permite almacenar y recuperar datos clave-valor de forma persistente, ideal para guardar configuraciones o preferencias de usuario.
-* **Picasso**: Biblioteca de código abierto desarrollada por Square que facilita la carga y almacenamiento en caché de imágenes en aplicaciones Android. Empleada para descargar y manejar las imágenes de los Pokémon.
-* **Android Navigation**: Componente que facilita la implementación de la navegación en aplicaciones Android. Permite mover a los usuarios entre pantallas (en este caso, *fragments*) y gestionar elementos relacionados con la navegación, como el manejo de la pila de retroceso.
+* **Android Navigation**: Componente que facilita la implementación de la navegación en aplicaciones Android. Permite mover a los usuarios entre pantallas (en este caso, *fragments*) y gestionar elementos relacionados con la navegación, como el manejo de la pila de retroceso. La aplicación dispone de dos controladores de navegación: Uno para las pestañas de la aplicación, y otro para la navegación por las pantallas de la guía.
 * **BottomNavigationView**: Componente de interfaz de usuario que facilita la navegación entre diferentes secciones utilizando una barra de navegación en la parte inferior de la pantalla. Proporciona un acceso rápido y consistente a cada sección. Este componente se integra fácilmente con Android Navigation.
 * **RecyclerView**: Componente de interfaz de usuario utilizado para mostrar grandes conjuntos de datos de forma eficiente, en este caso en forma de lista. Ofrece flexibilidad y rendimiento al reutilizar vistas mediante un patrón llamado "ViewHolder". RecyclerView permite personalizar fácilmente la presentación de los elementos mediante LayoutManagers (en este caso CardViews). Su diseño modular lo hace ideal para listas complejas y dinámicas, con soporte nativo para arrastrar y soltar, y también para deslizamiento, tal y como se emplea en esta aplicación.
-
+* **SharedPreferences**: API Android que permite almacenar y recuperar datos clave-valor de forma persistente, ideal para guardar configuraciones o preferencias de usuario. En esta aplicación se emplea para almacenar si el usuario ya ha visualizado la guía en algún momento previo.
+* **Drawable**: Es cualquier recurso gráfico que puede mostrarse en la interfaz de usuario. Puede ser una imagen, una forma definida en XML, un selector de estados o incluso gráficos generados dinámicamente mediante código. La aplicación los utiliza de manera profusa en guía interactiva (imágenes, fondos...).
+* **Transitions**: Efectos visuales que se aplican a un elemento (aparición, desvanecimiento, transformación, etc.). En la app, concretamente se utilizan transiciones al entrar o salir en cada una de las páginas de la guía interactiva.
+* **Animators**: Clase empleada crear animaciones sofisticadas en la interfaz de usuario. Permite modificar propiedades de vistas a lo largo del tiempo, proporcionando efectos que pueden personalizarse con todo detalle. En la guía interactiva y en el Easter Egg "Bola de fuego" se emplean para implementar animaciones en la forma, transparencia, tamaño o posición de los objetos.
+* **SoundPool**: Clase que permite reproducir pequeños fragmentos de sonido, que aportan a la aplicación un efecto inmersivo mágico.
+* **VideoView**: Elemento visual que permite introducir, dentro de un layout, la reproducción de un vídeo.
+* **MediaController**: Clase empleada en la aplicación para proporcionar al usuario controles durante la visualización del vídeo del Easter Egg "Bola de fuego".
+* **Canvas**: Clase que proporciona una superficie para dibujar gráficos. En la aplicación, se apoya de las clases **Paint** (pincel), **Path** (camino, trazado cons segmentos y curvas construidos a partir de coordenadas de puntos) o **RadialGradient** (coloreado mediante degradado radial). En cualquier caso, las posibilidades son prácticamente infinitas, aunque el trabajo de diseño e implementación manual puede resultar árduo.
 
 ## INSTRUCCIONES DE USO
 
-1. En la [página principal del repositorio](https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM03/), hacer clic en el botón verde `<> code` y copiar la dirección HTTPS que aparece (`https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM03.git`).
+1. En la [página principal del repositorio](https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM04/), hacer clic en el botón verde `<> code` y copiar la dirección HTTPS que aparece (`https://github.com/marioLopezSalazar/Lopez_Salazar_Mario_PMDM04.git`).
 2. En Android Studio, utilizamos el menú: *File -> New... -> Project from Version Control...*.
 3. En el diálogo emergente, seleccionaremos:
     * *Repository URL*
@@ -100,73 +59,41 @@ Las funcionalidades clave de la aplicación son las sigiuentes:
 
 Los archivos `build.gradle.kts` (principalmente el de nivel de App) ya contienen referencias a las librerías o dependencias que necesita la aplicación para funcionar. Así, en el proceso de construcción (*Build*) del proyecto, el propio Android Studio obtendrá de manera transparente las librerías necesarias. No obstante, también puede lanzarse este proceso mediante la opción *File -> Sync Project with Gradle Files*.
 
-Para la ejecución de la aplicación es necesario disponer de un dispositivo emulador (puede usarse el *Device Manager* que provee Android Studio) con API mínima 24. Basta seleccionar el emulador deseado y utilizar la opción *Run -> Run 'App'*.
+Para la ejecución de la aplicación es necesario disponer de un dispositivo emulador (puede usarse el *Device Manager* que provee Android Studio) con API mínima 31. Basta seleccionar el emulador deseado y utilizar la opción *Run -> Run 'App'*.
 
 
 ## CONCLUSIONES DEL DESARROLLADOR
 
-#### MainActivity y navegación 
-La construcción de la aplicación comenzó con la implementación de la **navegación**, creando el `navGraph` y los tres `fragments` de primer nivel de navegación (Pokédex, Pokémon capturados y Configuración `SharedPreferences`) y configurando lo anterior con el `BottomNavigationView`. He aprendido que un uso diestro de los atributos del `navGrap` facilita la configuración enormemente.
+En este caso, el desarrollo partía de una [versión base de la aplicación](https://github.com/lbarmar/SpyroTheDragon), con las pestañas de navegación totalmente funcionales. El desarrollo ha consistido en el diseño e implementación de los diferentes elementos multimedia.
 
-El diseño de esta **vista principal** ha sido modificado a lo largo del proyecto, pues inicialmente se hacía uso de la ActionBar por defecto pero posteriormente se hizo necesario emplear una ToolBar personalizada y un cambio en los layouts para conseguir un diseño visual óptimo en los cambios de fragmento.
+#### Guía interactiva 
+Ha resultado la parte del desarrollo que más trabajo ha requerido, principalmente para conseguir que los diferentes layouts y animaciones se comportasen de manera *responsive* ante diferentes tamaños y orientación de pantalla.
+
+![Guide_info](https://github.com/user-attachments/assets/e33a12d2-c085-4052-9ec1-654beba0608b)
+
+En este sentido, las animaciones de los diferentes `Drawable` tienen en cuenta la posición física de los mismos en términos de píxeles (obtenida en tiempo de ejecución), siendo necesario controlar el completo inflado de la interfaz antes de obtener las coordenadas, empleadas en último término para configurar las animaciones.
+
+Por otra parte, la distribución de los diferentes *paneles* que componen la guía y su adecuación a la orientación *portrait*/*landscape* ha requerido, finalmente, emplear ficheros de *layout* específicos para cada orientación, si bien los elementos visuales que aparecen en ambas versiones son los mismos.
+
+![GuideLand](https://github.com/user-attachments/assets/42c1e744-4817-45ff-b754-070cf50dad53)
+
+Se ha optado por implementar la guía en base a un grafo de navegación, siendo cada página de la guía un `Fragment` distinto. Esto ha facilitado la correcta integración con otros elementos, como por ejemplo el uso del botón *back* para retroceder en la guía, o el mantenimiento en la misma página aunque la aplicación pase por segundo plano o la pantalla gire.
+
+La guía está desarrollada en base a varios `Drawable`, efectos y animaciones, de elaboración *ex-profeso*, habiendo conseguido un resultado bastante integrado y robusto.
+
+#### Easter Egg "Bola de fuego"
+
+En este caso el reto ha estado en tener la paciencia suficiente para elaborar un `Path` con forma de llamarada de dragón. Por falta de tiempo, el diseño final ha resultado básico aunque (considero) suficiente. 
+
+Ha resultado una simbiosis técnico-crativa el ajuste de los parámetros de los distintos objetos Java involucrados en la animación, ajustando los valores hasta la décima para conseguir un efecto visual uniforme y convincente.
+
+Como en el caso anterior, se han utilizado las coordenadas (en términos de píxeles en tiempo de ejecución) de la imagen de Spyro, para así calcular dónde dibujar la llama y con qué tamaño, lo que hace a la animación independiente del dispositivo y la orientación. Como aspecto interesante, destacar que, al estar la imagen incursa en ScrollView+RecyclerView, ha sido necesario tener en consideración el tamaño de la Barra del Sistema y la Barra de Navegación (externas a la app).
 
 
-#### Autenticación
-El arranque de **Firebase** y la implementación de la **autenticación** (login y logout) resultó sencilla, siguiendo las indicaciones de la documentación y de la [profesora](https://github.com/lbarmar).
+#### Easter Egg "Vídeo"
 
-Decidí después implementar la opción de **eliminar usuario**, que ha supuesto un auténtico desafío:
-* Descubrí que era necesaria la reautentificación del usuario para que la llamada de borrado de usuario tuviese efecto. Este aspecto no aparece en la documentación básica de Firebase.
-* La reautentificación se realiza de forma diferente según el método de autentificación.
-* Ha sido necesario implementar un diálogo personalizado para requerir al usuario su contraseña. Esto ha sido una oportunidad para investigar sobre `AlertDialog` personalizados y la personalización del `EditText`.
+La introducción del vídeo en la app es un proceso sencillo. Algo más complicado ha resultado el mantener viva la reproducción ante un cambio de orientación o un paso a segundo plano. No obstante, este aspecto ha permitido profundizar en el funcionamiento de los métodos del ciclo de vida de la `Activity`, y qué sucede con la misma cuando se producen los eventos antes indicados.
 
-#### Diseño de los RecyclerView
-Esta parte se desarrolló utilizando datos de ejemplo, creando objetos de modelo directamente en código.
-Cada uno de los dos RecyclerView funciona con una `List` subyacente, una sobre objetos de la clase `PokémonId` y otra sobre objetos de la clase `Pokémon` que extiende a la anterior. Esto ha facilitado el chequeo ágil sobre si un Pokémon está o no capturado, lo que facilita las operaciones de actualización en la Pokédex.
-En fases posteriores se ha añadido la funcionalidad de liberar Pokémon mediante deslizamiento de la CardView, para ello he investigado sobre la clase `ItemTouchHelper`. Aquí lo más difícil ha sido integrar esta clase de forma limpia con el resto de clases que componen la funcionalidad del RecyclerView.
-
-#### Descarga de la API Pokémon
-El diseño de la intefaz de llamadas y el *adaper* ha resultado sencillo. Más complicado ha resultado el diseño de una estructura de clases que encaje con la estructura JSON de la API, siendo necesarios numerosos reajustes y pruebas hasta obtener los resultados deseados.
-En este momento surgió la necesidad de comenzar a trabajar con rutinas asíncronas (callbacks, `onCompleteListener`, objetos `Task`...) y la comunicación asíncrona entre clases y métodos, aspecto que se iría complicando al implementar otras funcionalidades.
-
-#### Guardado y descarga de Pokémon capturados
-Aquí el asunto se complicó, pues previamente fue necesario entender la estructura de datos que maneja Firestore, y cómo funciona el sistema de referencias, documentos y colecciones. Por otra parte, la necesidad de hacer robustas las funcionalidades lleva a tener que anidar las callbacks, para que las tareas que dependen una de otra se realicen de forma consecutiva (no paralela) y se controlen los posibles errores.
-
-Una vez implementada esta parte, se hizo necesario coordinar el flujo completo de carga de la aplicación (Pokédex y Pokémon capturados, e integración de ambas).
-
-Se consideró conviente mostrar siempre los Pokémon ordenados mediante su índice, que se ha conseguido de manera simple haciendo que `PokemonId implements Comparable` y haciendo uso del método `List.sort()`.
-
-#### Detalle de los Pokémon
-Esta sección no ha supuesto demasiadas complicaciones, más allá de la implementación de métodos auxiliares para mostrar los datos numéricos en unidades habituales en nuestro contexto.
-
-#### Captura de Pokémon
-En esta acción ya se ven involucradas muchas clases de la aplicación. Como aspectos a reseñar:
-   * El bloqueo de los eventos para evitar *doble captura*, tanto momentánea (por doble toque) como sobre Pokémon previamente capturados.
-   * La necesidad de coordinar varios procesos asíncronos que dependen uno del otro, y que deben ser revertidos si una de las acciones falla.
-   * La actualización de las vistas de forma coherente.
-
-#### Liberación de Pokémon
-De manera similar a lo anterior, están involucrados varios procesos asíncronos que dependen uno del otro. Se ha cuidado que no ocurran situaciones inconsistentes en caso de error.
-Ha sido necesario investigar un poco sobre cómo actualizar el RecyclerView tras la eliminación del objeto pues, al contrario de lo que sucede durante la captura, en la liberación no se produce un cambio de vista (y por tanto el reinflado automático).
-La configuración de la *SharedPreference* no ha supuesto dificultad.
-
-#### Tamaño de la Pokédex
-Una funcionalidad adicional que me ha permitido profundizar en el diseño de las `SharedPreferences` mediante el uso del fichero `arrays.xml`.
-Realmente no ha supuesto demasiadas modificaciones sobre lo ya implementado, simplemente introducir algunas modificaciones para el caso de desear liberar un Pokémon que ya no está presente en la Pokédex.
-
-#### Estilo visual
-La elección de la paleta de colores, las tipografías y los iconos ha resultado un proceso creativo.
-
-Lo más complicado de esta parte (y posiblemente de toda la aplicación) ha sido descubrir los atributos concretos a emplear para personalizar las propiedades de los elementos visuales, especialmente de la `ToolBar` y de la `BottomNavigationView`.
-
-También ha resultado especialmente complicado personalizar la interfaz preconstruida de *Login*, pues el estilo base empleado por Firebase no es el mismo del resto de mi aplicación. Ha sido necesario, por tanto, diseñar un nuevo `<theme>` para esta actividad.
-
-#### Idioma
-Más allá de la traducción de los ficheros `strings.xml` y `arrays.xml`, disponer de los *tipos de Pokémon* en ambos idomas ha requerido una toma de decisión. Con el objetivo de continuar el espíritu intencional de este proyecto, que maneja datos localizados fuera de la propia aplicación, se ha decidido utilizar otra colección de Firestore para almacenar el diccionario de traducción de *tipos de Pokémon*. La descarga se realiza de manera análoga a la descarga de Pokémon capturados.
-
-Cuando el usuario cambia la preferencia, se realiza la descarga del correspondiente diccionario (en este caso, el diccionario *types-ES*). Al mostrar los datos al usuario, un método auxiliar efectúa la traducción.
 
 #### Documentación
 Finalmente, el proceso de documentación JavaDoc de todas las clases implementadas ha permitido una revisión general del código, refinando aspectos de modularidad e implementación, así como una profundización en las llamadas y métodos de las librerías empleadas.
-
-### Valoración general y conclusiones
-La realización de este proyecto ha resultado un reto realmente estimulante, por la cantidad de aspectos variados del desarrollo de aplicaciones que se involucran en él. Me ha permitido poner en práctica muchos tópicos que previamente había aprendido en otros módulos, pero sobre todo, aprender nuevos aspectos y rincones del mundo Android.
